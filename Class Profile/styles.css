@@ -1,5 +1,6 @@
   body{
     font-family: futura;
+    background-image: url(./sparkle.gif);
     background-color: lavenderblush;
     color: violet;
   }
@@ -12,12 +13,23 @@
     font-style: italic;
   }
 
+  #disco{
+    position: absolute;
+    top:0%;
+    left:44%;
+  }
+
   #background{
   background-image:url(./sparkle.gif), url(./sparkle2.gif), url(./giphy.gif), url(./blue.jpeg);
   background-repeat:no-repeat;
   background-size: cover;
   }
 
+  .spotify{
+    position:absolute;
+    top:50%;
+    left:50%;
+  }
 
   #description{
     font-style: bold;
