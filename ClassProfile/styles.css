@@ -1,0 +1,84 @@
+  body{
+    font-family: proxima-nova;
+    background-image: url(./sparkle.gif);
+    background-color: lavenderblush;
+    color: violet;
+  }
+
+  header{
+    text-align: center
+  }
+
+  figcaption{
+    font-style: italic;
+  }
+
+  #disco{
+    position: absolute;
+    top:0%;
+    left:44%;
+  }
+
+  #background{
+  background-image:url(./sparkle.gif), url(./sparkle2.gif), url(./giphy.gif), url(./blue.jpeg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  }
+
+  #background2{
+  background-image: url(./bats.gif), url(./dark.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  }
+
+  .spotify{
+    position:absolute;
+    top:50%;
+    left:50%;
+  }
+
+  #description{
+    font-style: bold;
+  }
+
+  #web-ring {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 15px;
+    background-color: rgb(52, 86, 228);
+    border: solid 2px white;
+    font-family: sans-serif;
+  }
+
+  #web-ring a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+  #web-ring a:hover {
+    text-decoration: underline;
+  }
+
+.fireflies{
+  width:400px;
+  height:400px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;

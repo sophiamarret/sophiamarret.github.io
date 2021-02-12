@@ -1,5 +1,6 @@
   body{
     font-family: proxima-nova;
+    font-weight: 400;
     background-image: url(./sparkle.gif);
     background-color: lavenderblush;
     color: violet;
