@@ -1,5 +1,5 @@
   body{
-    font-family: futura;
+    font-family: proxima-nova;
     background-image: url(./sparkle.gif);
     background-color: lavenderblush;
     color: violet;
@@ -21,6 +21,12 @@
 
   #background{
   background-image:url(./sparkle.gif), url(./sparkle2.gif), url(./giphy.gif), url(./blue.jpeg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  }
+
+  #background2{
+  background-image: url(./bats.gif), url(./dark.jpg);
   background-repeat:no-repeat;
   background-size: cover;
   }
@@ -53,6 +59,11 @@
   #web-ring a:hover {
     text-decoration: underline;
   }
+
+.fireflies{
+  width:400px;
+  height:400px;
+}
 
 .dropdown {
   position: relative;
