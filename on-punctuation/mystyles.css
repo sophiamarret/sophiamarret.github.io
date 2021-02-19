@@ -1,0 +1,136 @@
+/*------general------*/
+
+
+
+html{
+  font-size: 62.5%
+}
+
+/*FADE-IN*/
+
+#fade-in {
+animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track { 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #F63274; 
+  border-radius: 10px;
+}
+
+
+
+/*------index.html------*/
+
+
+
+/*ON PUNCTUATION -- GERTRUDE STEIN*/
+.header{
+  font-size: 2rem;
+  text-align: center;
+  position: sticky;
+  top:0;
+  background-color: white;
+}
+
+/*WHAT DOES A COMMA DO*/
+.scrolling {
+  font-size: 9rem; 
+  line-height: .8;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 25rem;
+  padding-bottom: 50rem;
+}
+
+#marquee1{
+  padding: 0;
+  line-height: 0;
+}
+
+#marquee2{
+  padding: 0;
+  line-height: 0;
+}
+
+/*THERE ARE SOME PUNCTUATIONS THAT ARE INTERESTING...*/
+.text1{
+  font-size: 9rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 7rem;
+  padding-left: 25rem;
+
+}
+
+/*CIRCLES*/
+.container {
+  position: relative;
+  width: 400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 200;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: hotpink;
+  font-size: 9rem;
+  font-style: italic;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#greencircle{
+  top: 20%;
+  left:50%;
+}
+
+
+
+/*------home.html------*/
+
+
+
+/*LET US BEGIN WITH THOSE THAT ARE NOT.*/
+.text2{
+  font-size: 9rem;
+  font-style: italic;
+  line-height: 7rem;
+  padding-top: 25rem;
+}
+
+/*SECTION LINKS*/
+.sections{
+  font-size: 4rem;
+}
+
+/*------question.html------*/
