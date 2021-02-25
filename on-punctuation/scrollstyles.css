@@ -1,5 +1,3 @@
-/*------general------*/
-
 html{
   font-size: 62.5% 
 }
@@ -23,51 +21,8 @@ body{
   z-index:9999;
 }
 
-/*FADE-IN*/
-#fade-in {
-animation: fadeIn ease 5s;
-}
-@keyframes fadeIn {
-0% {opacity:0;}
-100% {opacity:1;}
-}
 
-/*SCROLLBAR*/
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-track { 
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: #F63274; 
-  border-radius: 10px;
-}
-
-
-
-/*------index.html------*/
-
-
-/*ON PUNCTUATION -- GERTRUDE STEIN*/
-.header{
-  font-size: 2rem;
-  font-family: apoc;
-  font-style: normal;
-  text-align: center;
-  position: fixed;
-  padding-top: .2rem;
-  top:0;
-  background-color: white;
-  opacity: 80%;
-  z-index: 1;
-  height: 8.5vh;
-  width: 100vw;
-}
-
-/*WHAT DOES A COMMA DO*/
-/*.scrolling {
+.scrolling {
   font-size: 9rem; 
   font-style: italic;
   font-family: apoc;
@@ -144,84 +99,4 @@ animation: fadeIn ease 5s;
                 -webkit-transform: translateX(-100%);
                 transform: translateX(-100%); }
         }
-}*/
-
-/*THERE ARE SOME PUNCTUATIONS THAT ARE INTERESTING...*/
-.text1{
-  font-size: 9rem;
-  font-family: apoc;
-  line-height: 7rem;
-  padding-bottom: 25rem;
-  padding-top: 50rem;
-  z-index: 99999;
-
 }
-
-/*CIRCLES*/
-.container {
-  width: 400px;
-  position:absolute;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: auto;
-  width: 200;
-  opacity: 0;
-  transition: .5s ease;
-}
-.container:hover .overlay {
-  opacity: 1;
-}
-.text {
-  font-size: 12rem;
-  font-family: apoc; 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-#greencircle{
-  position: absolute;
-  top:180vh;
-}
-
-#pinkcircle{
-  position: absolute;
-  top:200vh;
-  left:10vw;
-  padding:none;
-}
-
-
-
-/*------home.html------*/
-
-
-/*LET US BEGIN WITH THOSE THAT ARE NOT.*/
-.text2{
-  font-size: 9rem;
-  font-style: italic;
-  line-height: 7rem;
-  padding-top: 20rem;
-}
-
-/*SECTION LINKS*/
-.sections{
-  font-size: 4rem;
-  text-align: center;
-  font-style: italic;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/*------question.html------*/
-
-
