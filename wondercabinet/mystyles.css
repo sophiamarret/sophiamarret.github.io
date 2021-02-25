@@ -1,0 +1,159 @@
+html{
+  font-size: 62.5% 
+}
+
+@font-face{
+  font-family: pixel;
+  src: url(PressStart.ttf);
+}
+@font-face{
+	font-family: pixelsmall;
+  	src: url(DotGothicRegular.ttf);
+}
+
+body{
+	background: #f44281;
+	background-image: url(./sparkle.gif), url(./heart.gif);
+	background-size: 50rem;
+}
+
+.header{
+	text-align: center;
+	width:60rem;
+	font-size: 2rem;
+	color: white;
+	font-family: pixel;
+	text-shadow: 0 0 .5rem #FFFF;
+	background:#f44281;
+}
+
+.text{
+	width:62rem;
+	font-size: 1.5rem;
+	color: white;
+	font-family: pixelsmall;
+	padding-bottom:2rem;
+	text-shadow: 0 0 .5rem #FFFF;
+	background:#f44281;
+}
+.container{
+	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  	grid-column-gap: 3rem;
+  	grid-row-gap: 3rem;
+  	width:60rem;
+  }
+
+ img{
+ 	box-shadow: 0 0 2rem #FFFF;
+ }
+
+@media(max-width: 500px){
+	.header{
+	font-size: 2rem;
+	width:30rem;
+	line-height: 2.5rem;
+	}
+	.text{
+	text-align: center;
+	font-size: 1.3rem;
+	width:30rem;
+	padding:none;
+	}
+	.container{
+	display: grid;
+  	grid-template-columns: repeat(1, 1fr);
+  	grid-column-gap: 3rem;
+  	grid-row-gap: 3rem;
+  	width:30rem;
+  }
+}
+/*LARGE FRONT*/
+
+	.L-F{
+	width:30rem;
+	}
+ 
+/*SMALL FRONT */
+
+	.S-F{
+	width:30rem;
+	height: 30rem;
+  	object-fit: cover;
+  	object-position: center;
+	}
+
+/*LARGE TOP*/
+
+	.L-T{
+	width:30rem;
+	}
+
+/*SMALL TOP*/
+
+	.S-T{
+	width:30rem;
+	height: 30rem;
+  	object-fit: cover;
+  	object-position: center;
+	}
+
+/*LARGE LEFT*/
+
+	.L-L{
+	width:30rem;
+	}
+
+/*SMALL LEFT*/
+
+	.S-L{
+	width:30rem;
+	height: 30rem;
+  	object-fit: cover;
+  	object-position: center;
+	}
+
+/*LARGE RIGHT*/
+
+	.L-R{
+	width:30rem;
+	}
+
+/*SMALL RIGHT*/
+
+	.S-R{
+	width:30rem;
+	height: 30rem;
+  	object-fit: cover;
+  	object-position: center;
+	}
+
+/*LARGE BOTTOM*/
+
+	.L-BO{
+	width:30rem;
+	}
+
+/*SMALL BOTTOM*/
+
+	.S-BO{
+	width:30rem;
+	height: 30rem;
+  	object-fit: cover;
+  	object-position: center;
+	}
+
+/*LARGE BACK*/
+
+	.L-BA{
+	width:30rem;
+	}
+
+/*SMALL BACK*/
+
+	.S-BA{
+	width:30rem;
+	height: 30rem;
+  	object-fit: cover;
+  	object-position: center;
+	}
