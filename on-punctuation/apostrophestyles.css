@@ -91,3 +91,23 @@ font-size: 3.5vh;
 .arrow{
 	padding-bottom: 4vh;
 }
+
+@media only screen
+and (min-width: 280px)
+and (max-width: 460px)
+and (orientation: portrait) 
+{
+
+  .header{
+    font-size: 1.2vh;}
+
+  .apostrophetext{
+    font-size: 1.5vh;
+    line-height:3vh;
+    padding-left: 10vw;
+    padding-right: 10vw;}
+
+  .arrow{
+    height:10vh;
+  }
+}

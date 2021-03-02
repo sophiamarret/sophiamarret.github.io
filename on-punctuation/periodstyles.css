@@ -37,7 +37,7 @@ animation: fadeIn ease 5s;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #f64932; 
+  background: #F63274; 
   border-radius: 10px;
 }
 
@@ -54,7 +54,7 @@ animation: fadeIn ease 5s;
   z-index: 1;
   height: 8.5vh;
   width: 100vw;
-  color:#f64932;
+  color:#F63274;
 }
 
 .header :hover{
@@ -74,7 +74,7 @@ font-size: 3.5vh;
 
 
 .periodtext :visited{
-  color:#f64932;
+  color:#F63274;
 }
 .periodtext :hover{
   color:#d8ff41;
@@ -85,9 +85,29 @@ font-size: 3.5vh;
 }
 
 .punctuation :hover{
-  color:#f64932;
+  color:#F63274;
 }
 
 .arrow{
 	padding-bottom: 4vh;
+}
+
+@media only screen
+and (min-width: 280px)
+and (max-width: 460px)
+and (orientation: portrait) 
+{
+
+  .header{
+    font-size: 1.2vh;}
+
+  .periodtext{
+    font-size: 1.5vh;
+    line-height:3vh;
+    padding-left: 10vw;
+    padding-right: 10vw;}
+
+  .arrow{
+    height:10vh;
+  }
 }

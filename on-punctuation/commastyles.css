@@ -37,7 +37,7 @@ animation: fadeIn ease 5s;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #F63274; 
+  background: #f64932; 
   border-radius: 10px;
 }
 
@@ -74,7 +74,7 @@ font-size: 3.5vh;
 
 
 .commatext :visited{
-  color:#F63274;
+  color:#f64932;
 }
 .commatext :hover{
   color:#d8ff41;
@@ -85,9 +85,30 @@ font-size: 3.5vh;
 }
 
 .punctuation :hover{
-  color:#F63274;
+  color:#f64932;
 }
 
 .arrow{
 	padding-bottom: 4vh;
+}
+
+
+@media only screen
+and (min-width: 280px)
+and (max-width: 460px)
+and (orientation: portrait) 
+{
+
+  .header{
+    font-size: 1.2vh;}
+
+  .commatext{
+    font-size: 1.5vh;
+    line-height:3vh;
+    padding-left: 10vw;
+    padding-right: 10vw;}
+
+  .arrow{
+    height:10vh;
+  }
 }
