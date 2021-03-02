@@ -4,11 +4,35 @@ html{
 
 body{
   overflow-x: hidden;
+  margin:0;
 }
 
 @font-face{
-  font-family: apoc;
-  src: url(Apoc.ttf);
+  font-family: inter;
+  src: url(Inter-Regular.otf);
+}
+
+@font-face{
+  font-family: interbold;
+  src: url(Inter-SemiBold.otf);
+}
+
+.header{
+  font-size: 2.2vh;
+  font-family: inter;
+  text-align: center;
+  position: fixed;
+  padding-top: .2rem;
+  top:0;
+  background-color: white;
+  opacity: 80%;
+  z-index: 1;
+  height: 8.5vh;
+  width: 100vw;
+}
+
+.header :hover{
+  color: #F63274; 
 }
 
 /*PAGE BREAKDOWN*/
@@ -18,85 +42,47 @@ body{
 
 #fold2{
   height:100%;
-  z-index:9999;
 }
 
 
 .scrolling {
-  font-size: 9rem; 
+  font-size: 12vh;
   font-style: italic;
-  font-family: apoc;
-  line-height: 8rem;
-  padding-top: 25rem;
-  padding-bottom: 50rem;
+  font-family: orpheuspro, serif;
+  line-height: 11vh;
+  padding-top: 36vh;
+  padding-left: none;
+  padding-right: none;
   overflow: hidden;
   position: relative;
 }
 
 .leftscroll, .rightscroll{
-  position: absolute;
   margin: 0;
-  line-height: 50px;
+  white-space: nowrap;
+}
+.rightscroll {
+  text-align: right;
 }
 
 .leftscroll{
-  animation: left-scroll 15s linear infinite;
-
-   -moz-transform:translateX(50%);
-  -webkit-transform:translateX(50%); 
-  transform:translateX(50%);
-  -moz-animation: left-scroll 10s linear infinite alternate;
-  -webkit-animation: left-scroll 10s linear infinite alternate;
-  animation: left-scroll 10s linear infinite alternate;
+  animation: left-scroll 10s linear infinite;
 }
 
 .rightscroll{
-  animation: right-scroll 15s linear infinite;
-
-   -moz-transform:translateX(50%);
-  -webkit-transform:translateX(50%); 
-  transform:translateX(50%);
-  -moz-animation: right-scroll 10s linear infinite alternate;
-  -webkit-animation: right-scroll 10s linear infinite alternate;
-  animation: right-scroll 10s linear infinite alternate;
+  display: flex;
+  justify-content: flex-end;
+  animation: right-scroll 10s linear infinite;
 }
 
- @keyframes left-scroll {
-            0% {transform: translateX(100%);}
-            100% {transform: translateX(-100%);} }
-        
-        @-webkit-keyframes left-scroll {
-            0% {-webkit-transform: translateX(100%); }
-            100% {-webkit-transform: translateX(-100%);} }
-        
-        @keyframes left-scroll {
-            0% {
-                transform: translateX(100%);
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%); }
-            100% {
-                transform: translateX(-100%);
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%); }
-        }
+@keyframes left-scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-2779px);}
+}
 
 
- @keyframes right-scroll {
-            100% {transform: translateX(100%);}
-            0% {transform: translateX(-100%);} }
-        
-        @-webkit-keyframes right-scroll {
-            100% {-webkit-transform: translateX(100%); }
-            0% {-webkit-transform: translateX(-100%);} }
-        
-        @keyframes right-scroll {
-            100% {
-                transform: translateX(100%);
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%); }
-            0% {
-                transform: translateX(-100%);
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%); }
-        }
+@keyframes right-scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(2779px);} }
+
 }

@@ -1,26 +1,37 @@
 /*------general------*/
 
 html{
-  font-size: 62.5% 
+  font-size: 62.5%
 }
 
 body{
   overflow-x: hidden;
+  margin:0;
+  padding:0;
 }
 
 @font-face{
-  font-family: apoc;
-  src: url(Apoc.ttf);
+  font-family: inter;
+  src: url(Inter-Regular.otf);
 }
+
+@font-face{
+  font-family: interbold;
+  src: url(Inter-SemiBold.otf);
+}
+
 
 /*PAGE BREAKDOWN*/
 #fold1{
   height:100%;
+
 }
 
 #fold2{
   height:100%;
-  z-index:9999;
+  display:flex;
+  flex-direction: center;
+  justify-content: center;
 }
 
 /*FADE-IN*/
@@ -52,9 +63,8 @@ animation: fadeIn ease 5s;
 
 /*ON PUNCTUATION -- GERTRUDE STEIN*/
 .header{
-  font-size: 2rem;
-  font-family: apoc;
-  font-style: normal;
+  font-size: 2.2vh;
+  font-family: inter;
   text-align: center;
   position: fixed;
   padding-top: .2rem;
@@ -66,94 +76,20 @@ animation: fadeIn ease 5s;
   width: 100vw;
 }
 
-/*WHAT DOES A COMMA DO*/
-/*.scrolling {
-  font-size: 9rem; 
-  font-style: italic;
-  font-family: apoc;
-  line-height: 8rem;
-  padding-top: 25rem;
-  padding-bottom: 50rem;
-  overflow: hidden;
-  position: relative;
+.header :hover{
+  color: #F63274; 
 }
 
-.leftscroll, .rightscroll{
-  position: absolute;
-  margin: 0;
-  line-height: 50px;
-}
-
-.leftscroll{
-  animation: left-scroll 15s linear infinite;
-
-   -moz-transform:translateX(50%);
-  -webkit-transform:translateX(50%); 
-  transform:translateX(50%);
-  -moz-animation: left-scroll 10s linear infinite alternate;
-  -webkit-animation: left-scroll 10s linear infinite alternate;
-  animation: left-scroll 10s linear infinite alternate;
-}
-
-.rightscroll{
-  animation: right-scroll 15s linear infinite;
-
-   -moz-transform:translateX(50%);
-  -webkit-transform:translateX(50%); 
-  transform:translateX(50%);
-  -moz-animation: right-scroll 10s linear infinite alternate;
-  -webkit-animation: right-scroll 10s linear infinite alternate;
-  animation: right-scroll 10s linear infinite alternate;
-}
-
- @keyframes left-scroll {
-            0% {transform: translateX(100%);}
-            100% {transform: translateX(-100%);} }
-        
-        @-webkit-keyframes left-scroll {
-            0% {-webkit-transform: translateX(100%); }
-            100% {-webkit-transform: translateX(-100%);} }
-        
-        @keyframes left-scroll {
-            0% {
-                transform: translateX(100%);
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%); }
-            100% {
-                transform: translateX(-100%);
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%); }
-        }
-
-
- @keyframes right-scroll {
-            100% {transform: translateX(100%);}
-            0% {transform: translateX(-100%);} }
-        
-        @-webkit-keyframes right-scroll {
-            100% {-webkit-transform: translateX(100%); }
-            0% {-webkit-transform: translateX(-100%);} }
-        
-        @keyframes right-scroll {
-            100% {
-                transform: translateX(100%);
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%); }
-            0% {
-                transform: translateX(-100%);
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%); }
-        }
-}*/
 
 /*THERE ARE SOME PUNCTUATIONS THAT ARE INTERESTING...*/
 .text1{
-  font-size: 9rem;
-  font-family: apoc;
-  line-height: 7rem;
-  padding-bottom: 25rem;
-  padding-top: 50rem;
-  z-index: 99999;
+  position:relative;
+  text-align: center;
+  font-size: 12vh;
+  font-family: orpheuspro, serif;
+  font-style: italic;
+  line-height: 10vh;
+  z-index: 100;
 
 }
 
@@ -162,6 +98,7 @@ animation: fadeIn ease 5s;
   width: 400px;
   position:absolute;
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -169,37 +106,126 @@ animation: fadeIn ease 5s;
   left: 0;
   right: 0;
   height: auto;
-  width: 200;
+  width: 400;
   opacity: 0;
-  transition: .5s ease;
+  transition: 5s ease;
 }
 .container:hover .overlay {
-  opacity: 1;
+  opacity: 100;
+  filter: blur(1rem);
 }
+
 .text {
-  font-size: 12rem;
-  font-family: apoc; 
+  font-size: 20rem;
+  font-family: orpheuspro, serif; 
+  font-style: bold;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 1;
 }
 
 #greencircle{
   position: absolute;
-  top:180vh;
+  top:192vh;
+  left:2vw;
+  padding:none;
+  z-index: 5;
 }
 
 #pinkcircle{
   position: absolute;
-  top:200vh;
-  left:10vw;
+  top:135vh;
+  left:12vw;
+  padding:none;
+  z-index: 10;
+}
+
+#orangecircle{
+  position: absolute;
+  top:185vh;
+  left:40vw;
+  padding:none;
+  z-index: 5;
+
+}
+
+#yellowcircle{
+  position: absolute;
+  top:135vh;
+  left:70vw;
+  padding:none;
+  z-index: 5;
+}
+
+
+#exclamationcircle{
+  position: absolute;
+  top:135vh;
+  left:43vw;
   padding:none;
 }
 
+#coloncircle{
+  position: absolute;
+  top:192vh;
+  left:73vw;
+  padding:none;
+  z-index: 5;
+}
+
+#orangeoval{
+  position: absolute;
+  top:118vh;
+  left:0vw;
+  filter: blur(2rem);
+  padding:none;
+  z-index:2;
+
+}
+
+#pinkoval{
+position: absolute;
+  top:185vh;
+  left:50vw;
+  padding:none;
+  z-index:2;
+}
+
+#greenoval{
+position: absolute;
+top:140vh;
+left:0vw;
+padding:none;
+z-index:2;
+}
+
+#greenoval2{
+position: absolute;
+top:203vh;
+left:43vw;
+padding:none;
+filter: blur(2rem);
+z-index:1;
+}
+
+#pinkoval2{
+position: absolute;
+top:180vh;
+left:-15vw;
+padding: none;
+z-index:1;
+}
+
+#pinkoval3{
+position: absolute;
+top:125vh;
+left:80vw;
+padding: none;
+z-index:1;
+}
 
 
 /*------home.html------*/
@@ -207,21 +233,47 @@ animation: fadeIn ease 5s;
 
 /*LET US BEGIN WITH THOSE THAT ARE NOT.*/
 .text2{
-  font-size: 9rem;
+  font-size: 12vh;
+  line-height: 10vh;
+  padding-top: 25vh;
+  padding-bottom: 10vh;
+  font-family: orpheuspro, serif;
   font-style: italic;
-  line-height: 7rem;
-  padding-top: 20rem;
+  margin: 0;
 }
 
 /*SECTION LINKS*/
 .sections{
-  font-size: 4rem;
+  font-family: inter;
+  font-size: 3.5vh;
   text-align: center;
-  font-style: italic;
   display: grid;
+  width:70vw;
   grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 22vh;
+}
+.sections :visited{
+  color:#F63274;
+}
+.sections :hover{
+  color:#d8ff41;
+  filter: blur(.2rem);
 }
 
-/*------question.html------*/
+/*------back.html------*/
+#backbutton{
+  padding-top:44vh;
+  font-size: 12vh;
+  line-height: 10vh;
+  font-family: orpheuspro, serif;
+  font-style: italic;
+}
 
+#backbutton :visited{
+  color:#F63274;
+}
 
+#backbutton :hover{
+  color:#d8ff41;
+  filter: blur(.2rem);
+}

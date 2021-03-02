@@ -1,0 +1,93 @@
+html{
+  font-size: 62.5%
+}
+
+body{
+  overflow-x: hidden;
+  margin:0;
+  padding:0;
+  background-image: url(./periodbg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+@font-face{
+  font-family: inter;
+  src: url(Inter-Regular.otf);
+}
+
+/*FADE-IN*/
+#fade-in {
+animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track { 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #f64932; 
+  border-radius: 10px;
+}
+
+
+
+/*------index.html------*/
+
+.header{
+  font-size: 2.2vh;
+  font-family: inter;
+  text-align: center;
+  padding-top: .2rem;
+  top:0;
+  z-index: 1;
+  height: 8.5vh;
+  width: 100vw;
+  color:#f64932;
+}
+
+.header :hover{
+  color: black; 
+}
+
+
+
+.periodtext{ 
+font-family: inter;
+font-size: 3.5vh;
+  line-height: 5vh;
+ 
+  padding-left: 20vw;
+  padding-right: 20vw;
+}
+
+
+.periodtext :visited{
+  color:#f64932;
+}
+.periodtext :hover{
+  color:#d8ff41;
+}
+
+.punctuation{
+	text-decoration: none;
+}
+
+.punctuation :hover{
+  color:#f64932;
+}
+
+.arrow{
+	padding-bottom: 4vh;
+}
