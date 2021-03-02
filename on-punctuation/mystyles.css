@@ -251,6 +251,7 @@ z-index:1;
   width:70vw;
   grid-template-columns: repeat(3, 1fr);
   padding-bottom: 22vh;
+  color:#F63274
 }
 .sections :visited{
   color:#F63274;
