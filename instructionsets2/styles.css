@@ -22,7 +22,8 @@ background: #121859;
 }
 
 @keyframes colors {
-  0% {background: lightpink;}
+  0% {background: red;}
+  5% {background: lightpink;}
   50% {background: lightgreen;}
   100% {background: mediumpurple;}
 }
