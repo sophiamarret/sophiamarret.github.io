@@ -1,0 +1,94 @@
+html{
+  font-size: 62.5%
+}
+
+body{
+background: #121859;
+}
+
+
+.circle {
+  position:absolute;
+  border-radius: 50%;
+  background-color:red;
+  width: 9.5rem;
+  height: 9.5rem;
+  filter: blur(.5rem);
+}
+
+.circle:hover {
+  background-color: white;
+  cursor: wait;
+}
+
+@keyframes colors {
+  0% {background: lightpink;}
+  50% {background: lightgreen;}
+  100% {background: mediumpurple;}
+}
+@keyframes circle3 {
+  0% {left: 45%; top: 80%;}
+  50% {left: 80%; top: 60%;}
+  75% {left: 60%; top: 55%;}
+  100% {left: 45%; top: 80%;}
+}
+@keyframes circle4 {
+  0% {left: 50%; top: 85%;}
+  50% {left: 15%; top: 55%;}
+  75% {left: 25%; top: 60;}
+  100% {left: 50%; top: 85%;}
+}
+
+@keyframes circle5 {
+  0% {left: 55%; top: 90%;}
+  50% {left: 70%; top: 50%;}
+  75% {left: 65%; top: 75%;}
+  100% {left: 55%; top: 90%;}
+}
+
+
+.circle:nth-child(1) {
+  left:0;
+  top:0;
+}
+
+.circle:nth-child(2) {
+  top:0;
+  right:0;
+}
+.circle:nth-child(3) {
+  left: 45%;
+  top: 80%;
+  animation-name: colors, circle3;
+  animation-duration: 2s, 8s;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+}
+
+.circle:nth-child(4) {
+  left: 50%;
+  top: 85%;
+  animation-name: colors, circle4;
+  animation-duration: 2s, 8s;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+}
+
+.circle:nth-child(5) {
+  left: 55%;
+  top: 90%;
+  animation-name: colors, circle5;
+  animation-duration: 2s, 8s;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+}
+
+/*.circle:nth-child(4) {
+  left: 80%;
+  top: 70%;
+  animation-name: colors, circle4;
+  animation-duration: 1s, 5s;
+  animation-timing-function: ease-in-out, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-delay: 1s, 2s;
+}*/
