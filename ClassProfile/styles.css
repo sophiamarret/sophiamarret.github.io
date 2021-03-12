@@ -51,6 +51,12 @@
             }
 }
 
+.javagame{
+  position: relative;
+  right:50;
+  left:80vw;
+}
+
   #description{
     font-style: bold;
   }

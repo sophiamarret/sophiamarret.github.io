@@ -3,92 +3,81 @@ html{
 }
 
 body{
-background: #121859;
+background: navy;
 }
 
-
-.circle {
+.ball {
   position:absolute;
   border-radius: 50%;
   background-color:red;
-  width: 9.5rem;
-  height: 9.5rem;
+  width: 10rem;
+  height: 10rem;
   filter: blur(.5rem);
 }
 
-.circle:hover {
+.ball :hover {
   background-color: white;
   cursor: wait;
 }
 
 @keyframes colors {
-  0% {background: lightpink;}
+  0% {background: red;}
+  5% {background: lightpink;}
   50% {background: lightgreen;}
   100% {background: mediumpurple;}
 }
-@keyframes circle3 {
+@keyframes ball3 {
   0% {left: 45%; top: 80%;}
   50% {left: 80%; top: 60%;}
   75% {left: 60%; top: 55%;}
   100% {left: 45%; top: 80%;}
 }
-@keyframes circle4 {
+@keyframes ball4 {
   0% {left: 50%; top: 85%;}
   50% {left: 15%; top: 55%;}
   75% {left: 25%; top: 60;}
   100% {left: 50%; top: 85%;}
 }
 
-@keyframes circle5 {
+@keyframes ball5 {
   0% {left: 55%; top: 90%;}
   50% {left: 70%; top: 50%;}
   75% {left: 65%; top: 75%;}
   100% {left: 55%; top: 90%;}
 }
 
-
-.circle:nth-child(1) {
+.ball:nth-child(1) {
   left:0;
   top:0;
 }
 
-.circle:nth-child(2) {
+.ball:nth-child(2) {
   top:0;
   right:0;
 }
-.circle:nth-child(3) {
+.ball:nth-child(3) {
   left: 45%;
   top: 80%;
-  animation-name: colors, circle3;
+  animation-name: colors, ball3;
   animation-duration: 2s, 8s;
   animation-timing-function: ease-in-out, ease-in-out;
   animation-iteration-count: infinite, infinite;
 }
 
-.circle:nth-child(4) {
+.ball:nth-child(4) {
   left: 50%;
   top: 85%;
-  animation-name: colors, circle4;
+  animation-name: colors, ball4;
   animation-duration: 2s, 8s;
   animation-timing-function: ease-in-out, ease-in-out;
   animation-iteration-count: infinite, infinite;
 }
 
-.circle:nth-child(5) {
+.ball:nth-child(5) {
   left: 55%;
   top: 90%;
-  animation-name: colors, circle5;
+  animation-name: colors, ball5;
   animation-duration: 2s, 8s;
   animation-timing-function: ease-in-out, ease-in-out;
   animation-iteration-count: infinite, infinite;
 }
-
-/*.circle:nth-child(4) {
-  left: 80%;
-  top: 70%;
-  animation-name: colors, circle4;
-  animation-duration: 1s, 5s;
-  animation-timing-function: ease-in-out, ease-in-out;
-  animation-iteration-count: infinite, infinite;
-  animation-delay: 1s, 2s;
-}*/
