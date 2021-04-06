@@ -14,7 +14,7 @@ body{
 }
 .book-container:hover {
 	cursor: pointer;
-	border: 3px solid fuchsia;
+	border: 2px solid fuchsia;
 	border-radius: 25px;
 	background-color: black;
 
