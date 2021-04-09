@@ -36,46 +36,68 @@ function consoleLogBooks() {
   });
 }
 
-let pageElement = document.querySelector('.book-container');
-let infoElement = document.querySelector('#info');
-let infoDetails = document.querySelector('#details');
+// let pageElement = document.querySelector('.book-container');
+// let infoElement = document.querySelector('#info');
+// let infoDetails = document.querySelector('#details');
 
-function showInfo(event) {
-  console.log("hello")
-  if(event.target.classList.contains('row1')) {
-   infoDetails.innerHTML = `
-    <h1>${event.target.dataset.book_title}</h1>
-    <p>available: ${event.target.dataset.genre}</p>
-   `;
+// function showInfo(event) {
+//   console.log("hello")
+//   if(event.target.classList.contains('row1')) {
+//    infoDetails.innerHTML = `
+//     <h1>${event.target.dataset.book_title}</h1>
+//     <p>${event.target.dataset.genre}</p>
+//    `;
 
-    infoElement.classList.add('show');
-  }
-}
+//     infoElement.classList.add('show');
+//   }
+// }
 
-pageElement.addEventListener('click', showInfo);
+// pageElement.addEventListener('click', showInfo);
 
 
 function showBooks() {
   console.log("showBooks()");
   books.forEach(book => {
 
-    var bookContainer = document.createElement("div");
-    bookContainer.classList.add("book-container");
-    document.querySelector(".container").append(bookContainer);
+    let bookCircles = document.createElement("div");
+    bookCircles.classList.add("row1");
+    document.querySelector(".row1").append(bookCircles)
 
-    var bookTitle = document.createElement("h1");
-    bookTitle.classList.add("book-title");
-    bookTitle.innerText = book.fields.book_title;
-    bookContainer.append(bookTitle);
+bookCircles.addEventListener("click", () => {
+const container = document.querySelector(".container");
 
-    var nameOfGenre = document.createElement("h1");
-    nameOfGenre.classList.add("book-genre");
-    nameOfGenre.innerText = book.fields.genre;
-    bookContainer.append(nameOfGenre);
-
-  })
+while (container.childNodes.length > 0) {
+container.removeChild(container.firstChild);
+}
+const bookContainer = document.createElement("div");
+bookContainer.classList.add("book-container");
+const bookTitle = document.createElement("h2");
+bookTitle.classList.add("book-title");
+bookTitle.append(book.fields.book_title);
+const nameOfGenre = document.createElement("span");
+nameOfGenre.classList.add("book-genre");
+nameOfGenre.append(book.fields.genre);
+bookContainer.append(bookTitle, nameOfGenre);
+container.append(bookContainer);
+});
 
 }
+  //   let bookContainer = document.createElement("div");
+  //   bookContainer.classList.add("book-container");
+  //   document.querySelector(".container").append(bookContainer);
+
+  //   let bookTitle = document.createElement("h1");
+  //   bookTitle.classList.add("book-title");
+  //   bookTitle.innerText = book.fields.book_title;
+  //   bookContainer.append(bookTitle);
+
+  //   let nameOfGenre = document.createElement("h1");
+  //   nameOfGenre.classList.add("book-genre");
+  //   nameOfGenre.innerText = book.fields.genre;
+  //   bookContainer.append(nameOfGenre);
+
+  // })
+
 
   //   var bookAuthor = document.createElement("h2");
   //   bookAuthor.classList.add("book-author");

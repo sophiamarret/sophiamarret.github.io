@@ -8,7 +8,7 @@ body{
 	cursor: pointer;
 }
 
-#info {
+.container {
   display: none;
   background: red;
   z-index: 10;
@@ -16,17 +16,17 @@ body{
   height: 100vw;
  }
 
-#info.show {
+.container.show {
 	display: block;
 	position: absolute;
 }
-
+/*
 .shelf1{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
   padding-bottom: 1rem;
-}
+}*/
 
 .row1{
 	width:5rem;
@@ -34,6 +34,7 @@ body{
 	border-radius:100%;
 	background-color: white;
 	margin-right: 1rem;
+	flex-shrink: 0
 }
 
 /*.book-container{
