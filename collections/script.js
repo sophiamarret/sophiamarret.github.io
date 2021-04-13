@@ -8,7 +8,7 @@ let base = new Airtable({
 );
 
 base("books")
-    .select({})
+    .select({view:"Grid view"})
     .eachPage(gotPageOfBooks, gotAllBooks);
 
 function gotPageOfBooks(records, fetchNextPage) {
@@ -28,7 +28,11 @@ function gotAllBooks(err) {
     }
 
     consoleLogBooks();
+    try{
     showBooks();
+   } catch(e) {
+    console.error(e)
+   }
 }
 
 function consoleLogBooks() {
@@ -38,94 +42,74 @@ function consoleLogBooks() {
     });
 }
 
-// let pageElement = document.querySelector('.book-container');
-// let infoElement = document.querySelector('#info');
-// let infoDetails = document.querySelector('#details');
 
-// function showInfo(event) {
-//   console.log("hello")
-//   if(event.target.classList.contains('row1')) {
-//    infoDetails.innerHTML = `
-//     <h1>${event.target.dataset.book_title}</h1>
-//     <p>${event.target.dataset.genre}</p>
-//    `;
-
-//     infoElement.classList.add('show');
-//   }
-// }
-
-// pageElement.addEventListener('click', showInfo);
-
+let pageElement = document.querySelector('.book-container');
 
 function showBooks() {
     console.log("showBooks()");
     books.forEach(book => {
+        let shelf = pageElement.querySelector(`.shelf-${book.fields.shelf}`)
+        if(!shelf){ 
+            let newshelf = document.createElement("div");
+            newshelf.classList.add(`shelf-${book.fields.shelf}`);
+            pageElement.append(newshelf);
+            shelf = newshelf;
+        }
 
-        let bookCircles = document.createElement("div");
-        bookCircles.classList.add("row1");
-        document.querySelector(".row1").append(bookCircles)
 
-        bookCircles.addEventListener("click", () => {
-            const container = document.querySelector(".container");
 
-            while (container.childNodes.length > 0) {
-                container.removeChild(container.firstChild);
-            }
-            const bookContainer = document.createElement("div");
+        let bookElement = document.createElement("div");
+        bookElement.classList.add(book.fields.genre.replace(" ","-"));
+        bookElement.classList.add("book");
+        // bookElement.innerText = book.fields.book_title;
+        shelf.append(bookElement);
+
+
+
+        bookElement.addEventListener("click", () => {
+            let container = document.querySelector(".detail");
+            container.classList.add("show");
+
+            let bookContainer = document.createElement("div");
             bookContainer.classList.add("book-container");
-            const bookTitle = document.createElement("h2");
+
+            let orderNumber = document.createElement("p");
+            orderNumber.classList.add("book-order");
+            orderNumber.innerText = book.fields.order;
+            bookContainer.append(orderNumber);
+
+            let bookTitle = document.createElement("p");
             bookTitle.classList.add("book-title");
-            bookTitle.append(book.fields.book_title);
-            const nameOfGenre = document.createElement("span");
+            bookTitle.innerText = book.fields.book_title;
+            bookContainer.append(bookTitle);
+
+            let bookDescription = document.createElement("p");
+            bookDescription.classList.add("book-description");
+            bookDescription.innerText = book.fields.description;
+            bookContainer.append(bookDescription);
+
+            let nameOfGenre = document.createElement("span");
             nameOfGenre.classList.add("book-genre");
-            nameOfGenre.append(book.fields.genre);
-            bookContainer.append(bookTitle, nameOfGenre);
+            nameOfGenre.innerText = book.fields.genre;
+            bookContainer.append(nameOfGenre);
+            
+            let coverImage = document.createElement("img");
+            coverImage.classList.add("book-image");
+            coverImage.src = book.fields.cover_image[0].url;
+            bookContainer.append(coverImage);
+
             container.append(bookContainer);
         });
 
     })
 
 }
-//   let bookContainer = document.createElement("div");
-//   bookContainer.classList.add("book-container");
-//   document.querySelector(".container").append(bookContainer);
 
-//   let bookTitle = document.createElement("h1");
-//   bookTitle.classList.add("book-title");
-//   bookTitle.innerText = book.fields.book_title;
-//   bookContainer.append(bookTitle);
+// let closeDetailButton = document.querySelector('#close-detail');
 
-//   let nameOfGenre = document.createElement("h1");
-//   nameOfGenre.classList.add("book-genre");
-//   nameOfGenre.innerText = book.fields.genre;
-//   bookContainer.append(nameOfGenre);
+// function closeDetail() {
+//   bookElement.classList.remove('show')
 
-// })
+// }
 
-
-//   var bookAuthor = document.createElement("h2");
-//   bookAuthor.classList.add("book-author");
-//   bookAuthor.innerText = book.fields.author;
-//   bookContainer.append(bookAuthor);
-
-//   var bookDescription = document.createElement("p");
-//   bookDescription.classList.add("book-description");
-//   bookDescription.innerText = book.fields.description;
-//   bookContainer.append(bookDescription);
-
-//   var bookOrder = document.createElement("p");
-//   bookOrder.classList.add("book-order");
-//   bookOrder.innerText = book.fields.order;
-//   bookContainer.append(bookOrder);
-
-//   var bookImage = document.createElement("img");
-//   bookImage.classList.add("book-image");
-//   bookImage.src = book.fields.book_image[0].url;
-//   bookContainer.append(bookImage);
-
-// bookContainer.addEventListener("click", function() {
-//     bookDescription.classList.toggle("active");
-//     bookImage.classList.toggle("active");
-//     bookAuthor.classList.toggle("active");
-//   });
-//  });
+// closeDetailButton.addEventListener('click', closeInfo);

@@ -1,215 +1,182 @@
 body{
 	font-family: sofia-pro;
 	background: #EBEBEB;
+	margin:0;
+    padding:0;
 }
-
 
 .book-container{
+	padding: 0;
+	margin: 0;
+
+}
+
+.book{
+	width:3.5rem;
+	height:3.5rem;
+	border-radius:100%;
+	background-color: white;
+	margin-right: .5rem;
+	margin-top: 2rem;
+	flex-shrink: 0;
 	cursor: pointer;
 }
 
-.container {
+.detail{
+  top:0;
+  left:0;
+  position:fixed;
   display: none;
-  background: red;
   z-index: 10;
-  width: 100vh;
-  height: 100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: #EBEBEB;
  }
 
-.container.show {
+.detail.show {
 	display: block;
-	position: absolute;
 }
-/*
-.shelf1{
+
+
+
+/*SHELVES*/
+
+.shelf-1{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
-  padding-bottom: 1rem;
-}*/
-
-.row1{
-	width:5rem;
-	height:5rem;
-	border-radius:100%;
-	background-color: white;
-	margin-right: 1rem;
-	flex-shrink: 0
 }
 
-/*.book-container{
-	cursor: pointer;
-
-	padding:1rem;
-	background-color: white;
-	border: 1px solid black;
-	border-radius: 25px;
-	display:grid;
-	grid-gap: 2rem;
-	grid-template-columns: 1fr 1fr;
-}*/
-
-/*.shelf2{
+.shelf-2{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
-  padding-bottom: 1rem;
+
 }
 
-.shelf3{
+.shelf-3{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
-  padding-bottom: 1rem;
 }
 
-.shelf4{
+.shelf-4{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
-  padding-bottom: 1rem;
 }
 
-.shelf5{
+.shelf-5{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
-  padding-bottom: 1rem;
 }
 
-.shelf6{
+.shelf-6{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
-  padding-bottom: 1rem;
 }
 
-.shelf7{
+.shelf-7{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
-  padding-bottom: 1rem;
 }
 
-.shelf8{
+.shelf-8{
   display: flex;
   flex-direction: row;
   margin-left: 10rem;
-  padding-bottom: 1rem;
-}*/
-
-
-/*.row2{
-	width:2rem;
-	height:2rem;
-	border-radius:100%;
-	background-color: white;
-	margin-right: 1rem;
 }
 
-.row3{
-	width:2rem;
-	height:2rem;
-	border-radius:100%;
-	background-color: white;
-	margin-right: 1rem;
+
+/*ELEMENTS*/
+
+.book-title{
+	font-size: 2rem;
+	font-style: bold;
+	padding-left: 20rem;
+	margin:0;
+	width: 50rem;
+
 }
 
-.row4{
-	width:2rem;
-	height:2rem;
-	border-radius:100%;
-	background-color: white;
-	margin-right: 1rem;
-}
-
-.row5{
-	width:2rem;
-	height:2rem;
-	border-radius:100%;
-	background-color: white;
-	margin-right: 1rem;
-}
-
-.row6{
-	width:2rem;
-	height:2rem;
-	border-radius:100%;
-	background-color: white;
-	margin-right: 1rem;
-}
-
-.row7{
-	width:2rem;
-	height:2rem;
-	border-radius:100%;
-	background-color: white;
-	margin-right: 1rem;
-}
-
-.row8{
-	width:2rem;
-	height:2rem;
-	border-radius:100%;
-	background-color: white;
-	margin-right: 1rem;
-}*/
-
-
-
-/*.book-container:hover {
-	cursor: pointer;
-	border: 2px solid black;
-	border-radius: 25px;
-	background-color: pink;
-
-}*/
-
-/*.book-order{
-	font-weight: bold;
+.book-genre{
 	font-size: 1rem;
-	color: black;
-	font-style: italic;
-}
-
-h1{
-	font-weight: bold;
-	font-size: 1.3rem;
-	margin: 0;
-	color: black;
-}
-
-.book-author{
-	font-weight: bold;
-	font-size: 1rem;
-	color: black;
-	font-style: italic;
-	display: none;
-}
-
-.book-author.active{
-	display: block;
+	padding-left: 20rem;
 }
 
 .book-image{
-	width:10rem;
+	padding-left: 40vw;
+	width:20rem;
 	height:auto;
-	display: none;
+
 }
 
-.book-image.active{
-	display: block;
+.book-order{
+	font-style: bold;
+	font-size:10vh;
+	left:20rem;
+	padding-left: 5rem;
+	margin:0;
 }
 
 .book-description{
+	padding-left: 20rem;
 	font-style: italic;
-	color: black;
-	display:none;
+	width: 30rem;
 }
 
-.book-description.active{
-	display: block;
-}
-*/
 
+/*GENRES*/
+
+.coming-of-age{
+	background-color: #FFF500;
+}
+
+.collected-work{
+	background-color: #FF7A00;
+	color: #FF7A00;
+}
+
+.romance{
+	background-color: #FF09E8;
+}
+
+.poetry{
+	background-color: #7000FE;
+}
+
+.thriller{
+	background-color: #001AFF;
+}
+
+.fantasy{
+	background-color: #CC39FF;
+}
+
+.science-fiction{
+	background-color: #51FC00;
+}
+
+.non-fiction{
+	background-color: #00ECDE;
+}
+
+.fiction{
+	background-color: #00C2FF;
+}
+
+.classic{
+	background-color: #DBFF00;
+}
+
+.memoir{
+	background-color: #FFC700;
+}
+
+.short-story{
+	background-color: #FF7A00;
+}
 
