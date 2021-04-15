@@ -1,9 +1,25 @@
 body{
 	background-image: linear-gradient(180deg, yellowgreen,mediumseagreen,seagreen);
-	background-size:fill;
+	height:100vh;
+	width:100vw;
 	background-repeat: no-repeat;
 	margin:0;
   	padding:0;
+}
+
+.bg{
+	background-image: linear-gradient(180deg, yellowgreen,mediumseagreen,seagreen);
+	height:300vh;
+	width:100vw;
+	background-repeat: no-repeat;
+}
+
+.text{
+	text-align: center;
+	color:white;
+	font-family: sans-serif;
+	font-size: 2vw;
+	width:30vw;
 }
 
 
@@ -11,6 +27,7 @@ body{
 	max-width:100%;
 	height:auto;
 	cursor:pointer;
+	position:fixed;
 }
 
 .step1.show{
@@ -18,6 +35,7 @@ body{
 	height:auto;
 	cursor:pointer;
 	display:block;
+	position:fixed;
 }
 
 .step1.close{
@@ -35,6 +53,7 @@ body{
 	height:auto;
 	cursor:pointer;
 	display:block;
+	position:fixed;
 }
 
 .step3{
@@ -47,6 +66,7 @@ body{
 	height:auto;
 	cursor:pointer;
 	display:block;
+	position:fixed;
 }
 
 .step4{
@@ -59,11 +79,13 @@ body{
 	height:auto;
 	cursor:pointer;
 	display:block;
+	position:fixed;
 }
 
 .step5{
 	display:none;
 	cursor:pointer;
+	position:fixed;
 }
 
 .step5.show{
@@ -71,6 +93,12 @@ body{
 	height:auto;
 	cursor:pointer;
 	display:block;
+	position:fixed;
+}
+
+.step5.close{
+	display: none;
+	cursor:pointer;
 }
 
 
