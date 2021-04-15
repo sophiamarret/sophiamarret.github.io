@@ -4,7 +4,6 @@ let step2 = document.querySelector('.step2');
 let step3 = document.querySelector('.step3');
 let step4 = document.querySelector('.step4');
 let step5 = document.querySelector('.step5');
-let bg1 = document.querySelector('.bg1');
 
 function showImage1() {
 	step1.classList.remove('close');
