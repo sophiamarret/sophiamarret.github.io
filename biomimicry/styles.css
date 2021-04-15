@@ -1,25 +1,76 @@
 body{
-	background-color: skyblue;
+	background-image: linear-gradient(180deg, cornflowerblue,deepskyblue,darkturquoise,darkcyan);
+	background-size:fill;
+	background-repeat: no-repeat;
 	margin:0;
   	padding:0;
 }
 
-#step1{
+
+.step1{
 	max-width:100%;
 	height:auto;
 	cursor:pointer;
 }
 
-
-#step5{
+.step1.show{
 	max-width:100%;
 	height:auto;
 	cursor:pointer;
+	display:block;
+}
+
+.step1.close{
+	display: none;
+	cursor:pointer;
+}
+
+.step2{
 	display:none;
+	cursor:pointer;
 }
 
-#step5.show{
+.step2.show{
 	max-width:100%;
 	height:auto;
 	cursor:pointer;
+	display:block;
 }
+
+.step3{
+	display:none;
+	cursor:pointer;
+}
+
+.step3.show{
+	max-width:100%;
+	height:auto;
+	cursor:pointer;
+	display:block;
+}
+
+.step4{
+	display:none;
+	cursor:pointer;
+}
+
+.step4.show{
+	max-width:100%;
+	height:auto;
+	cursor:pointer;
+	display:block;
+}
+
+.step5{
+	display:none;
+	cursor:pointer;
+}
+
+.step5.show{
+	max-width:100%;
+	height:auto;
+	cursor:pointer;
+	display:block;
+}
+
+
