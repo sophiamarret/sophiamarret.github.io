@@ -6,20 +6,108 @@ body{
 }
 
 .book-container{
-	padding: 0;
-	margin: 0;
+	position: relative;
 
 }
 
 .book{
-	width:3.5rem;
-	height:3.5rem;
-	border-radius:100%;
+	width:4%;
+	height:0;
+	padding-bottom: 4%;
+	border-radius:50%;
 	background-color: white;
-	margin-right: .5rem;
-	margin-top: 2rem;
+	margin-right: .8vw;
+	margin-top: 2.5vh;
 	flex-shrink: 0;
 	cursor: pointer;
+}
+
+.shelfnumber{
+	position:fixed;
+	display: flex;
+	flex-direction: column;
+	font-size: 2.5vh;
+	font-weight:600;
+	top: 15%;
+	left: 5%;
+	line-height: 143%;
+}
+
+/*.shelfnumber:visited {
+	color: white;
+	text-decoration-line: line-through;
+
+}*/
+
+.spinimage{
+	position:fixed;
+	width:7%;
+	height:auto;
+	top:3%;
+	right:3%;
+}
+
+.spin{
+	animation: spin 10s infinite linear;
+	display:block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(-360deg);}
+  } 
+
+
+.book.visited{
+	filter:blur(.4rem);
+}
+
+.book.romance{
+	background-color: #FF09E8; 
+}
+
+.book.coming-of-age{
+	background-color: #FFF500;
+}
+
+.book.collected-work{
+	background-color: #FF7A00;
+} 
+
+.book.poetry{
+	background-color: #7000FE;
+}
+
+.book.thriller{
+	background-color: #001AFF;
+}
+
+.book.fantasy{
+	background-color: #CC39FF;
+}
+
+.book.science-fiction{
+	background-color: #51FC00;
+}
+
+.book.non-fiction{
+	background-color: #00C2FF;
+}
+
+.book.fiction{
+	background-color: #00ECDE;
+}
+
+.book.classic{
+	background-color: #DBFF00;
+}
+
+.book.memoir{
+	background-color: #FFC700;
+}
+
+.book.short-story{
+	background-color: #FF0000;
 }
 
 .detail{
@@ -31,152 +119,229 @@ body{
   width: 100vw;
   height: 100vh;
   background-color: #EBEBEB;
+  overflow: hidden;
  }
 
 .detail.show {
 	display: block;
 }
 
-
-
-/*SHELVES*/
-
-.shelf-1{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10rem;
+/*.detail:hover .overlay{
+	opacity:.5;
 }
+*/
+/*.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: magenta;
+}*/
 
-.shelf-2{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10rem;
-
-}
-
-.shelf-3{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10rem;
-}
-
-.shelf-4{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10rem;
-}
-
-.shelf-5{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10rem;
-}
-
-.shelf-6{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10rem;
-}
-
-.shelf-7{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10rem;
-}
-
-.shelf-8{
-  display: flex;
-  flex-direction: row;
-  margin-left: 10rem;
+.detail.romance {
+	
 }
 
 
 /*ELEMENTS*/
 
 .book-title{
-	font-size: 2rem;
-	font-style: bold;
-	padding-left: 20rem;
+	font-size: 8vh;
+	line-height: 8vh;
+	font-weight:600;
 	margin:0;
 	width: 50rem;
+	display:flex;
+
+}
+
+.book-author{
+	font-size: 4vh;
+	font-weight:600;
+	margin:0;
+	width: 50rem;
+	display:flex;
 
 }
 
 .book-genre{
-	font-size: 1rem;
-	padding-left: 20rem;
+	font-size: 2vh;
+	cursor:pointer;
+	display:flex;
+	font-weight:600;
+	padding-left: 90vw;
 }
 
 .book-image{
-	padding-left: 40vw;
-	width:20rem;
+	width:25%;
 	height:auto;
-
+	display:flex;
+	margin-left: 50vw;
+	position: fixed;
+	margin-top: -10vh;
 }
 
 .book-order{
-	font-style: bold;
-	font-size:10vh;
-	left:20rem;
-	padding-left: 5rem;
+	font-weight:600;
+	font-size:80vh;
+	top:-11vh;
+	left:-10vw;
 	margin:0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	display:flex;
+	position: fixed;
 }
 
 .book-description{
-	padding-left: 20rem;
+	font-size: 2vh;
 	font-style: italic;
 	width: 30rem;
+	display:flex;
 }
 
 
 /*GENRES*/
 
-.coming-of-age{
-	background-color: #FFF500;
+.coming-of-age img{
+	box-shadow: 0px 0px 200px 20px #FFF500;
+}
+		.coming-of-age span{
+			color: #FFF500;
+			/*text-shadow: 0px 0px 1px black;*/
+		}
+
+.collected-work img{
+	box-shadow: 0px 0px 200px 20px #FF7A00;
+}
+		.collected-work span{
+			color: #FF7A00;
+		}
+
+.romance img{
+	box-shadow: 0px 0px 200px 20px #FF09E8;
+}
+		.romance span{
+			color: #FF09E8;
+		}
+
+.poetry img{
+	box-shadow: 0px 0px 200px 20px #7000FE;
+}
+		.poetry span{
+			color: #7000FE;
+		}
+
+.thriller img{
+	box-shadow: 0px 0px 200px 20px #001AFF;
+}
+		.thriller span{
+			color: #001AFF;
+		}
+
+.fantasy img{
+	box-shadow: 0px 0px 200px 20px #CC39FF;
+}
+		.fantasy span{
+			color: #CC39FF;
+		}
+
+.science-fiction img{
+	box-shadow: 0px 0px 200px 20px #51FC00;
+}
+		.science-fiction span{
+			color: #51FC00;
+		}
+
+.non-fiction img{
+	box-shadow: 0px 0px 200px 20px #00C2FF;
+}
+		.non-fiction span{
+			color: #00C2FF;
+		}
+
+.fiction img{
+	box-shadow: 0px 0px 200px 20px #00ECDE;
+}
+		.fiction span{
+			color: #00ECDE;
+		}
+
+.classic img{
+	box-shadow: 0px 0px 200px 20px #DBFF00;
+}
+		.classic span{
+			color: #DBFF00;
+		}
+
+.memoir img{
+	box-shadow: 0px 0px 200px 20px #FFC700;
+}
+		.memoir span{
+			color: #FFC700;
+		}
+
+.short-story img{
+	box-shadow: 0px 0px 200px 20px #FF0000;
+}
+		.short-story span{
+			color: #FF0000;
+		}
+
+/*SHELVES*/
+
+.shelf-1{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
+  margin-top:8%;
+
 }
 
-.collected-work{
-	background-color: #FF7A00;
-	color: #FF7A00;
+.shelf-2{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
 }
 
-.romance{
-	background-color: #FF09E8;
+.shelf-3{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
 }
 
-.poetry{
-	background-color: #7000FE;
+.shelf-4{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
 }
 
-.thriller{
-	background-color: #001AFF;
+.shelf-5{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
 }
 
-.fantasy{
-	background-color: #CC39FF;
+.shelf-6{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
 }
 
-.science-fiction{
-	background-color: #51FC00;
+.shelf-7{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
 }
 
-.non-fiction{
-	background-color: #00ECDE;
-}
-
-.fiction{
-	background-color: #00C2FF;
-}
-
-.classic{
-	background-color: #DBFF00;
-}
-
-.memoir{
-	background-color: #FFC700;
-}
-
-.short-story{
-	background-color: #FF7A00;
+.shelf-8{
+  display: flex;
+  flex-direction: row;
+  margin-left: 12%;
 }
 

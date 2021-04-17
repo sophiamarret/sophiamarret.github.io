@@ -59,46 +59,65 @@ function showBooks() {
 
 
         let bookElement = document.createElement("div");
-        bookElement.classList.add(book.fields.genre.replace(" ","-"));
+        bookElement.classList.add(book.fields.genre.replace(/\s/g,"-"));
         bookElement.classList.add("book");
-        // bookElement.innerText = book.fields.book_title;
         shelf.append(bookElement);
 
-
+        // let shelfNumber = document.querySelector(".shelfnumber");
 
         bookElement.addEventListener("click", () => {
+            bookElement.classList.add("visited");
+            // shelfNumber.classList.add("visited");
             let container = document.querySelector(".detail");
             container.classList.add("show");
+            container.classList.add(book.fields.genre.replace(/\s/g,"-"))
 
-            let bookContainer = document.createElement("div");
-            bookContainer.classList.add("book-container");
+            // let bookContainer = document.createElement("div");
+            // bookContainer.classList.add("book-container");
 
-            let orderNumber = document.createElement("p");
-            orderNumber.classList.add("book-order");
-            orderNumber.innerText = book.fields.order;
-            bookContainer.append(orderNumber);
 
-            let bookTitle = document.createElement("p");
-            bookTitle.classList.add("book-title");
-            bookTitle.innerText = book.fields.book_title;
-            bookContainer.append(bookTitle);
+            document.querySelector(".book-order").innerText = book.fields.order;
+            // let orderNumber = document.createElement("p");
+            // orderNumber.classList.add("book-order");
+            // orderNumber.innerText = book.fields.order;
+            // bookContainer.append(orderNumber);
+ 
+            document.querySelector(".book-title").innerText = book.fields.book_title;
+            // let bookTitle = document.createElement("p");
+            // bookTitle.classList.add("book-title");
+            // bookTitle.innerText = book.fields.book_title;
+            // bookContainer.append(bookTitle);
 
-            let bookDescription = document.createElement("p");
-            bookDescription.classList.add("book-description");
-            bookDescription.innerText = book.fields.description;
-            bookContainer.append(bookDescription);
+            document.querySelector(".book-author").innerText = book.fields.author;
 
-            let nameOfGenre = document.createElement("span");
-            nameOfGenre.classList.add("book-genre");
-            nameOfGenre.innerText = book.fields.genre;
-            bookContainer.append(nameOfGenre);
-            
-            let coverImage = document.createElement("img");
-            coverImage.classList.add("book-image");
-            coverImage.src = book.fields.cover_image[0].url;
-            bookContainer.append(coverImage);
+            document.querySelector(".book-description").innerText = book.fields.description;
+            // let bookDescription = document.createElement("p");
+            // bookDescription.classList.add("book-description");
+            // bookDescription.innerText = book.fields.description;
+            // bookContainer.append(bookDescription);
 
-            container.append(bookContainer);
+            document.querySelector(".book-genre").innerText = book.fields.genre;
+            // let nameOfGenre = document.createElement("span");
+            // nameOfGenre.classList.add("book-genre");
+            // nameOfGenre.innerText = book.fields.genre;
+            // bookContainer.append(nameOfGenre);
+
+                function backButton(){
+                container.classList.remove("show");
+                container.classList.remove(book.fields.genre.replace(/\s/g,"-"));
+
+                }
+
+            document.querySelector(".book-genre").addEventListener('click', backButton)
+
+
+            document.querySelector(".book-image").src = book.fields.cover_image[0].url;
+            // let coverImage = document.createElement("img");
+            // coverImage.classList.add("book-image");
+            // coverImage.src = book.fields.cover_image[0].url;
+            // bookContainer.append(coverImage);
+
+            // container.append(bookContainer);
         });
 
     })
