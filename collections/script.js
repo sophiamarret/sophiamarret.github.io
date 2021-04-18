@@ -65,12 +65,32 @@ function showBooks() {
 
         // let shelfNumber = document.querySelector(".shelfnumber");
 
+
+        let bookElements = document.querySelectorAll('book');
+        let allBooks = Array.from(bookElements);
+
+
         bookElement.addEventListener("click", () => {
             bookElement.classList.add("visited");
             // shelfNumber.classList.add("visited");
             let container = document.querySelector(".detail");
             container.classList.add("show");
             container.classList.add(book.fields.genre.replace(/\s/g,"-"))
+
+            let bookIndex = allBooks.findIndex(b => b == event.target);
+            let nextBook = bookIndex + 1;
+            if (nextBook > allBooks.length - 1) {
+                nextBook = 0;
+            }
+
+
+            
+        nextBookButton = document.createElement('button');
+            nextBookButton.append(container)
+
+            nextBookButton.addEventListener('click', function() {
+                allBooks[nextBook].click();
+            });
 
             // let bookContainer = document.createElement("div");
             // bookContainer.classList.add("book-container");
@@ -123,12 +143,3 @@ function showBooks() {
     })
 
 }
-
-// let closeDetailButton = document.querySelector('#close-detail');
-
-// function closeDetail() {
-//   bookElement.classList.remove('show')
-
-// }
-
-// closeDetailButton.addEventListener('click', closeInfo);
