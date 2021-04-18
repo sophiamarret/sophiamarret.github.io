@@ -70,7 +70,7 @@ function showBooks() {
         let allBooks = Array.from(bookElements);
 
 
-        bookElement.addEventListener("click", () => {
+        bookElement.addEventListener("click", (event) => {
             bookElement.classList.add("visited");
             // shelfNumber.classList.add("visited");
             let container = document.querySelector(".detail");
@@ -83,10 +83,8 @@ function showBooks() {
                 nextBook = 0;
             }
 
-
-            
-        nextBookButton = document.createElement('button');
-            nextBookButton.append(container)
+            nextBookButton = document.createElement('button');
+            nextBookButton.append(container);
 
             nextBookButton.addEventListener('click', function() {
                 allBooks[nextBook].click();
