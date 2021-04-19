@@ -35,7 +35,6 @@ body{
 
 .button{
 	color:red;
-	left:80vw;
 }
 
 /*.shelfnumber:visited {
@@ -148,11 +147,6 @@ body{
   transition: .5s ease;
   background-color: magenta;
 }*/
-
-
-.button{
-
-}
 
 
 .detail.romance {

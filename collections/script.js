@@ -79,6 +79,10 @@ function showBooks() {
                 nextBook = 0;
             }
 
+            if (document.querySelector('.detail button')) {
+            document.querySelector('.detail button').remove();
+            }
+
             nextBookButton = document.createElement('button');
             container.append(nextBookButton);
 
@@ -95,6 +99,8 @@ function showBooks() {
             // orderNumber.classList.add("book-order");
             // orderNumber.innerText = book.fields.order;
             // bookContainer.append(orderNumber);
+
+
  
             document.querySelector(".book-title").innerText = book.fields.book_title;
             // let bookTitle = document.createElement("p");
