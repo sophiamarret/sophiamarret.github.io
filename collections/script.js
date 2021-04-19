@@ -66,10 +66,6 @@ function showBooks() {
         // let shelfNumber = document.querySelector(".shelfnumber");
 
 
-        let bookElements = document.querySelectorAll('book');
-        let allBooks = Array.from(bookElements);
-
-
         bookElement.addEventListener("click", (event) => {
             bookElement.classList.add("visited");
             // shelfNumber.classList.add("visited");
@@ -84,9 +80,9 @@ function showBooks() {
             }
 
             nextBookButton = document.createElement('button');
-            nextBookButton.append(container);
+            container.append(nextBookButton);
 
-            nextBookButton.addEventListener('click', function() {
+            nextBookButton.addEventListener('click', () => {
                 allBooks[nextBook].click();
             });
 
@@ -141,3 +137,8 @@ function showBooks() {
     })
 
 }
+
+
+let bookElements = document.querySelectorAll('book');
+        let allBooks = Array.from(bookElements);
+

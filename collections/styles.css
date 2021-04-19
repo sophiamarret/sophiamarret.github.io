@@ -33,6 +33,11 @@ body{
 	line-height: 143%;
 }
 
+.button{
+	color:red;
+	left:80vw;
+}
+
 /*.shelfnumber:visited {
 	color: white;
 	text-decoration-line: line-through;
@@ -145,7 +150,7 @@ body{
 
 
 .button{
-	
+
 }
 
 
