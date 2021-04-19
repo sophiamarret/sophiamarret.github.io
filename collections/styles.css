@@ -125,10 +125,11 @@ body{
   height: 100vh;
   background-color: #EBEBEB;
   overflow: hidden;
+  min-height: 100vh;
  }
 
 .detail.show {
-	display: block;
+	display: flex;
 }
 
 /*.detail:hover .overlay{
@@ -191,7 +192,8 @@ body{
 .book-image{
 	width:25%;
 	height:auto;
-	display:flex;
+	display:grid;
+	position:fixed;
 	margin-left: 50vw;
 	margin-top: -10vh;
 }
@@ -200,12 +202,12 @@ body{
 	font-weight:600;
 	font-size:80vh;
 	top:-11vh;
-	left:-10vw;
+	left:0vw;
 	margin:0;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	display:flex;
-	position: fixed;
+	display:grid;
+	position:fixed;
 }
 
 .book-description{
