@@ -62,7 +62,7 @@ body{
 }
 
 .homespin:hover {
-	filter: blur(.4rem);
+	filter: invert();
 	opacity: 100%;
 }
 
