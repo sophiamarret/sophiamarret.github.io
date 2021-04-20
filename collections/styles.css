@@ -57,13 +57,14 @@ body{
 .homespin{
 	width:15%;
 	height:auto;
-	filter: invert();
+	opacity: 10%;
 	margin-top: 34vh;
 	cursor: pointer;
 }
 
 .homespin:hover {
 	filter: blur(.4rem);
+	opacity: 100%;
 }
 
 
