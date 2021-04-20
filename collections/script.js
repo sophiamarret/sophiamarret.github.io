@@ -83,12 +83,12 @@ function showBooks() {
             document.querySelector('.detail button').remove();
             }
 
-            nextBookButton = document.createElement('button');
-            container.append(nextBookButton);
+            // nextBookButton = document.createElement('button');
+            // container.append(nextBookButton);
 
-            nextBookButton.addEventListener('click', () => {
-                allBooks[nextBook].click();
-            });
+            // nextBookButton.addEventListener('click', () => {
+            //     allBooks[nextBook].click();
+            // });
 
             // let bookContainer = document.createElement("div");
             // bookContainer.classList.add("book-container");

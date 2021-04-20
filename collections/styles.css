@@ -10,6 +10,7 @@ body{
 
 }
 
+
 .book{
 	width:4%;
 	height:0;
@@ -23,18 +24,28 @@ body{
 }
 
 .shelfnumber{
+	max-height:64.5vh;
+	top:19vh;
 	position:fixed;
 	display: flex;
 	flex-direction: column;
 	font-size: 2.5vh;
 	font-weight:600;
-	top: 15%;
-	left: 5%;
-	line-height: 143%;
+	left: 12%;
+
+
+  animation: refresh 0.5s ease-out both;
+  animation-delay: 3s; 
+  opacity:0;
+}
+
+.shelfnumber1{
+	margin-top:0vh;
 }
 
 .button{
 	color:red;
+
 }
 
 /*.shelfnumber:visited {
@@ -43,12 +54,26 @@ body{
 
 }*/
 
+.homespin{
+	width:15%;
+	height:auto;
+	filter: invert();
+	margin-top: 34vh;
+	cursor: pointer;
+}
+
+.homespin:hover {
+	filter: blur(.4rem);
+}
+
+
 .spinimage{
 	position:fixed;
 	width:7%;
 	height:auto;
 	top:3%;
 	right:3%;
+	cursor: pointer;
 }
 
 .spin{
@@ -66,51 +91,51 @@ body{
 	filter:blur(.4rem);
 }
 
-.book.romance{
+.book.Romance{
 	background-color: #FF09E8; 
 }
 
-.book.coming-of-age{
+.book.Coming-of-Age{
 	background-color: #FFF500;
 }
 
-.book.collected-work{
+.book.Collected-Work{
 	background-color: #FF7A00;
 } 
 
-.book.poetry{
+.book.Poetry{
 	background-color: #7000FE;
 }
 
-.book.thriller{
+.book.Thriller{
 	background-color: #001AFF;
 }
 
-.book.fantasy{
+.book.Fantasy{
 	background-color: #CC39FF;
 }
 
-.book.science-fiction{
+.book.Science-Fiction{
 	background-color: #51FC00;
 }
 
-.book.non-fiction{
+.book.Non-Fiction{
 	background-color: #00C2FF;
 }
 
-.book.fiction{
+.book.Fiction{
 	background-color: #00ECDE;
 }
 
-.book.classic{
+.book.Classic{
 	background-color: #DBFF00;
 }
 
-.book.memoir{
+.book.Memoir{
 	background-color: #FFC700;
 }
 
-.book.short-story{
+.book.Short-Story{
 	background-color: #FF0000;
 }
 
@@ -149,11 +174,6 @@ body{
 }*/
 
 
-.detail.romance {
-	
-}
-
-
 /*ELEMENTS*/
 
 .book-title{
@@ -161,7 +181,6 @@ body{
 	line-height: 8vh;
 	font-weight:600;
 	margin:0;
-	width: 50rem;
 	display:flex;
 
 }
@@ -170,183 +189,285 @@ body{
 	font-size: 4vh;
 	font-weight:600;
 	margin:0;
-	width: 50rem;
 	display:flex;
 
 }
 
 .book-genre{
-	font-size: 2vh;
+	font-size: 2.5vh;
 	cursor:pointer;
 	display:flex;
-	font-weight:600;
-	padding-left: 90vw;
+	position: fixed;
+	top:3%;
+	right:2%;
+	z-index: 10;
+/*	border-radius: 50%;*/
+	border-right:2px solid;
+	padding:1.5vh;
 }
 
 .book-image{
 	width:25%;
 	height:auto;
-	display:grid;
+	display:flex;
 	position:fixed;
-	margin-left: 50vw;
-	margin-top: -10vh;
+	left:55vw;
+	top: 17vh;
 }
 
 .book-order{
 	font-weight:600;
-	font-size:80vh;
-	top:-11vh;
-	left:0vw;
+	font-size:60vh;
+	top:-20vh;
+	left:-3vw;
+	letter-spacing: -2.3vw;
+	width:70vw;
 	margin:0;
+	opacity:6.5%;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	display:grid;
+	display:flex;
 	position:fixed;
 }
 
 .book-description{
 	font-size: 2vh;
 	font-style: italic;
-	width: 30rem;
+	width:30vw;
 	display:flex;
+}
+
+.information{
+	position:relative;
+	top:55vh;
+	width:45vw;
+	padding-right: 5vw;
+	left:5vw;
 }
 
 
 /*GENRES*/
 
-.coming-of-age img{
-	box-shadow: 0px 0px 200px 20px #FFF500;
+.Coming-of-Age img{
+	box-shadow: 0px 0px 1000px 60px #FFF500;
 }
-		.coming-of-age span{
-			color: #FFF500;
+		.Coming-of-Age span{
+			color: #EBD710;
+		}
+		.Coming-of-Age span:hover{
+			color: black;
 		}
 
-.collected-work img{
-	box-shadow: 0px 0px 200px 20px #FF7A00;
+
+
+.Collected-Work img{
+	box-shadow: 0px 0px 1000px 60px #FF7A00;
 }
-		.collected-work span{
+		.Collected-Work span{
 			color: #FF7A00;
 		}
 
-.romance img{
-	box-shadow: 0px 0px 200px 20px #FF09E8;
+		.Collected-Work span:hover{
+			color:black;
+		}
+
+
+.Romance img{
+	box-shadow: 0px 0px 1000px 60px #FF09E8;
 }
-		.romance span{
+		.Romance span{
 			color: #FF09E8;
 		}
 
-.poetry img{
-	box-shadow: 0px 0px 200px 20px #7000FE;
+		.Romance span:hover{
+			color: black;
+		}
+
+.Poetry img{
+	box-shadow: 0px 0px 1000px 60px #7000FE;
 }
-		.poetry span{
+		.Poetry span{
 			color: #7000FE;
 		}
 
-.thriller img{
-	box-shadow: 0px 0px 200px 20px #001AFF;
+		.Poetry span:hover{
+			color: black;
+		}
+
+
+.Thriller img{
+	box-shadow: 0px 0px 1000px 60px #001AFF;
 }
-		.thriller span{
+		.Thriller span{
 			color: #001AFF;
 		}
 
-.fantasy img{
-	box-shadow: 0px 0px 200px 20px #CC39FF;
+		.Thriller span:hover{
+			color: black;
+		}
+
+.Fantasy img{
+	box-shadow: 0px 0px 1000px 60px #CC39FF;
 }
-		.fantasy span{
+		.Fantasy span{
 			color: #CC39FF;
 		}
 
-.science-fiction img{
-	box-shadow: 0px 0px 200px 20px #51FC00;
-}
-		.science-fiction span{
-			color: #51FC00;
+		.Fantasy span:hover{
+			color: black;
 		}
 
-.non-fiction img{
-	box-shadow: 0px 0px 200px 20px #00C2FF;
+.Science-Fiction img{
+	box-shadow: 0px 0px 1000px 60px #51FC00;
 }
-		.non-fiction span{
+		.Science-Fiction span{
+			color: #7AEB10;
+		}
+
+		.Science-Fiction span:hover{
+			color: black;
+		}
+
+.Non-Fiction img{
+	box-shadow: 0px 0px 1000px 60px #00C2FF;
+}
+		.Non-Fiction span{
 			color: #00C2FF;
 		}
 
-.fiction img{
-	box-shadow: 0px 0px 200px 20px #00ECDE;
+		.Non-Fiction span:hover{
+			color: black;
+		}
+
+.Fiction img{
+	box-shadow: 0px 0px 1000px 60px #00ECDE;
 }
-		.fiction span{
+		.Fiction span{
 			color: #00ECDE;
 		}
 
-.classic img{
-	box-shadow: 0px 0px 200px 20px #DBFF00;
-}
-		.classic span{
-			color: #DBFF00;
+		.Fiction span:hover{
+			color: black;
 		}
 
-.memoir img{
-	box-shadow: 0px 0px 200px 20px #FFC700;
+.Classic img{
+	box-shadow: 0px 0px 1000px 60px #DBFF00;
 }
-		.memoir span{
+		.Classic span{
+			color: #B1E10C;
+		}
+
+		.Classic span:hover{
+			color: black;
+		}
+
+.Memoir img{
+	box-shadow: 0px 0px 1000px 60px #FFC700;
+}
+		.Memoir span{
 			color: #FFC700;
 		}
 
-.short-story img{
-	box-shadow: 0px 0px 200px 20px #FF0000;
+		.Memoir span:hover{
+			color: black;
+		}
+
+.Short-Story img{
+	box-shadow: 0px 0px 1000px 60px #FF0000;
 }
-		.short-story span{
+		.Short-Story span{
 			color: #FF0000;
+		}
+
+		.Short-Story span:hover{
+			color: black;
 		}
 
 /*SHELVES*/
 
+@keyframes refresh {
+  0% { opacity: 0;}
+  100% { opacity: 1;}
+}
+
 .shelf-1{
   display: flex;
   flex-direction: row;
-  margin-left: 12%;
-  margin-top:8%;
+  margin-left: 16%;
+  margin-top:8.5%;
+
+  animation: refresh 0.5s ease-out both;
+  opacity:0;
 
 }
 
 .shelf-2{
   display: flex;
   flex-direction: row;
-  margin-left: 12%;
+  margin-left: 16%;
+
+  animation: refresh 0.5s ease-out both;
+  animation-delay: 0.3s;
+  opacity:0;
 }
 
 .shelf-3{
   display: flex;
   flex-direction: row;
-  margin-left: 12%;
+  margin-left: 16%;
+
+  animation: refresh 0.5s ease-out both;
+  animation-delay: 0.6s;
+  opacity:0;
 }
 
 .shelf-4{
   display: flex;
   flex-direction: row;
-  margin-left: 12%;
+  margin-left: 16%;
+
+  animation: refresh 0.5s ease-out both;
+  animation-delay: 0.9s;
+  opacity:0;
 }
 
 .shelf-5{
   display: flex;
   flex-direction: row;
-  margin-left: 12%;
+  margin-left: 16%;
+
+  animation: refresh 0.5s ease-out both;
+  animation-delay: 1.2s;
+  opacity:0;
 }
 
 .shelf-6{
   display: flex;
   flex-direction: row;
-  margin-left: 12%;
+  margin-left: 16%;
+
+  animation: refresh 0.5s ease-out both;
+  animation-delay: 1.5s;
+  opacity:0;
 }
 
 .shelf-7{
   display: flex;
   flex-direction: row;
-  margin-left: 12%;
+  margin-left: 16%;
+
+  animation: refresh 0.5s ease-out both;
+  animation-delay: 1.8s;
+  opacity:0;
 }
 
 .shelf-8{
   display: flex;
   flex-direction: row;
-  margin-left: 12%;
+  margin-left: 16%;
+
+  animation: refresh 0.5s ease-out both;
+  animation-delay: 2.1s;
+  opacity:0;
 }
 
