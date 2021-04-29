@@ -1,0 +1,46 @@
+@font-face{
+	font-family: hillside;
+	src: url(BNHillsideGrotesk.otf);
+}
+
+body{
+	background-color: #2400FF; 
+}
+
+#id1{
+	font-family: hillside;
+	color:#FAFF00;
+	font-size: 3vh;
+}
+
+#id2{
+	font-family: hillside;
+	color:#FAFF00;
+	font-size: 3vh;
+	display:none;
+}
+
+@media (max-width: 500px){
+	#id1{
+		display: none;
+	}
+	#id2{
+		display: inline-block;
+	}
+}
+
+
+.words{
+	position: absolute;
+	width:100%;
+}
+
+.words img{
+	width:600px;
+	display: none;
+}
+
+.tap{
+	width:100%;
+	display: none;
+}
