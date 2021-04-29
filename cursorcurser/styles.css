@@ -11,12 +11,14 @@ body{
 	font-family: hillside;
 	color:#FAFF00;
 	font-size: 3vh;
+	margin-top: 48vh;
 }
 
 #id2{
 	font-family: hillside;
 	color:#FAFF00;
 	font-size: 3vh;
+	margin-top: 46vh;
 	display:none;
 }
 
