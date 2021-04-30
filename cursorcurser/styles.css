@@ -42,7 +42,20 @@ body{
 	display: none;
 }
 
+.flips{
+	position: absolute;
+	width:100%;
+}
+
+.flips img{
+	width:600px;
+	display: none;
+}
+
 .tap{
 	width:100%;
+	position:fixed;
+	top:-10%; 
+	left:-2%;
 	display: none;
 }

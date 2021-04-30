@@ -1,38 +1,33 @@
-let myImages = ["fuck", "shit", "bitch", "ass"]
+let myImages = ["1.jpg", "2.jpg", "3.jpg"]
 
-document.querySelector("#id1").addEventListener('click', curse)
+document.addEventListener('click', curse)
 
 function curse() {
-	console.log("function")
-	// let randomImg = random(myImages)
-	let images = document.getElementsByTagName("IMG");
-	for(i = 0; i < images.length; i ++){
-		images[i].style.display = "none"
-	}
+	console.log("curse function")
 	let random = Math.floor(Math.random() * myImages.length);
-    if (random == 0) {
-            random = 1;
-    }
-    document.write('<img class="words" src="' + myImages [random] + '">');
-  	// let img = document.getElementById()
-  	// img.style.display="inline-block"
+    document.body.innerHTML = '<img class="words" src="' + myImages [random] + '">';
   }
 
 
-	if ('screen' in window && 'orientation' in screen) {
+if ('screen' in window && 'orientation' in screen) {
 		screen.orientation.addEventListener('change', rotate);
 		} 
-	else {
+else {
 		window.addEventListener('orientationchange', rotate);
 		}
+
 function rotate(event) {
 	document.querySelector("#id1").style.display = "none";
 	document.querySelector("#id2").style.display = "none";
 	document.querySelector(".tap").style.display = "block";
 }
 
-document.querySelector(".tap").addEventListener('click', flip)
+let mobileImages = ["a.jpg", "b.jpg", "c.jpg"]
+
+document.addEventListener('touchdown', flip)
 
 function flip() {
-	console.log("yuh")
+	console.log("flip function")
+	let random = Math.floor(Math.random() * mobileImages.length);
+    document.body.innerHTML = '<img class="words" src="' + mobileImages [random] + '">';
 }
