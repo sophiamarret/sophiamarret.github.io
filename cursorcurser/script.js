@@ -1,4 +1,4 @@
-let myImages = ["1.jpg", "2.jpg", "3.jpg"]
+let myImages = ["1.png", "2.png", "3.png", "4.png"]
 
 document.addEventListener('click', curse)
 
