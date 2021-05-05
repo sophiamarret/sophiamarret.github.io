@@ -32,7 +32,7 @@ let inMobile = window.matchMedia('screen and (max-width: 812px)');
 
 if (inMobile.matches) {
 	document.removeEventListener('click', curse);
-	document.addEventListener('click', flip);
+	document.addEventListener('touchdown', flip);
 
 function flip() {
 	console.log("flip function")
