@@ -26,18 +26,16 @@ function rotate(event) {
 
 let mobileImages = ["a.jpg", "b.jpg", "c.jpg"]
 
-let bg = document.querySelector('.bg');
+let inMobile = window.matchMedia('screen and (max-width: 812px)');
 
-// let inMobile = window.matchMedia('screen and (max-width: 812px)');
-
-// if (inMobile.matches) {
-// 	document.removeEventListener('click', curse);
+if (inMobile.matches) {
+	document.removeEventListener('click', curse);
 	document.addEventListener('touchstart', flip);
 
 function flip() {
 	console.log("flip function")
-	bg.style.backgroundColor = "#FAFF00";
+	document.body.style.backgroundColor = "#FAFF00";
 	let randomMobile = Math.floor(Math.random() * mobileImages.length);
     document.body.innerHTML = '<img class="flips" src="' + mobileImages [randomMobile] + '">';
 }
-// }
+}
