@@ -39,3 +39,6 @@ function flip() {
     document.body.innerHTML = '<img class="flips" src="' + mobileImages [randomMobile] + '">';
 }
 }
+
+
+
