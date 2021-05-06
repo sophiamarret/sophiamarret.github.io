@@ -30,8 +30,19 @@ body{
 	font-family: hillside;
 	color:#FAFF00;
 	font-size: 3vh;
-	margin-top: 42vh;
+	margin-top: 45vh;
 	display:none;
+}
+
+#and{
+	font-family: hillside;
+	color:#FAFF00;
+	font-size: 3vh;
+	margin-top: 12vh;
+	display:none;
+	animation: slam .2s;
+	animation-timing-function: ease-in;
+	animation-delay: 3s;
 }
 
 #id3{
@@ -44,9 +55,7 @@ body{
 #click:hover {
 	display:none !important;
 }
-/*#id3:hover {
-	display:block;
-}*/
+
 
 @media (max-width: 500px){
 	body{
@@ -59,6 +68,9 @@ body{
 	}
 	#id2{
 		display: inline-block;
+	}
+	#and{
+		display:block;
 	}
 	#id3{
 		display:none !important;
