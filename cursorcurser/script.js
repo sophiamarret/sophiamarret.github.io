@@ -26,7 +26,7 @@ function rotate(event) {
 }
 
 
-let mobileImages = ["a.jpg", "b.jpg", "c.jpg", "d.jpg", "e.jpg", "f.jpg", "g.jpg", "h.jpg"]
+let mobileImages = ["a.jpg", "b.jpg", "c.jpg", "d.jpg", "e.jpg", "f.jpg", "g.jpg", "h.jpg", "all.jpg"]
 
 let inMobile = window.matchMedia('screen and (max-width: 812px)');
 
