@@ -33,13 +33,12 @@ body{
 	display:none;
 }
 
-#id3{
+/*#id3{
 	font-family: hillside;
 	color:#FAFF00;
 	font-size: 3vh;
 	margin-top: 48vh;
 	cursor: url("./cursor.png"), auto;
-	display:none;
 }
 
 #id1:hover {
@@ -49,7 +48,7 @@ body{
 #id3:hover {
 	display:block;
 }
-}
+}*/
 
 @media (max-width: 500px){
 	body{
@@ -58,13 +57,13 @@ body{
 	}
 
 	#id1{
-		display: none;
+		display: none !important;
 	}
 	#id2{
-		display: inline-block;
+		display: inline-block !important;
 	}
 	#id3{
-		display:none;
+		display:none !important;
 	}
 }
 
@@ -101,11 +100,6 @@ body{
 	height:100vh;
 }
 
-.a{
-	right:0%;
-	bottom:0%;
-}
-
 .flips img{
 	width:600px;
 	display: none;
@@ -114,7 +108,7 @@ body{
 .tap{
 	width:100%;
 	position:fixed;
-	top:-8%; 
+	top:-5%; 
 	left:-2%;
 	display: none;
 }

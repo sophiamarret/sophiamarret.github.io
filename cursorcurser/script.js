@@ -21,6 +21,7 @@ let tap = document.querySelector(".tap")
 function rotate(event) {
 	document.querySelector("#id1").style.display = "none";
 	document.querySelector("#id2").style.display = "none";
+	document.querySelector("#id3").style.display = "none";
 	tap.style.display = "block";
 }
 
