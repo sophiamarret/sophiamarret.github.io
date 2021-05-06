@@ -1,4 +1,4 @@
-let myImages = ["1.png", "2.png", "3.png", "4.png"]
+let myImages = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png", "18.png"]
 
 document.addEventListener('click', curse)
 
@@ -39,3 +39,16 @@ function flip() {
     document.body.innerHTML = '<img class="flips" src="' + mobileImages [randomMobile] + '">';
 }
 }
+
+// let myCursor = document.querySelector("#cursor");
+
+// window.addEventListener("mousemove", function(event)
+// {
+// 	console.log(event);
+// 	console.log("X: ");
+// 	console.log(event.pageX);
+// 	console.log("Y :");
+// 	console.log(event.pageY);
+// 	myCursor.style.top = (event.pageY - 20) + "px";
+// 	myCursor.style.left = (event.pageX - 20) + "px";
+// });
