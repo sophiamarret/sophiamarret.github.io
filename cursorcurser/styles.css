@@ -14,15 +14,16 @@ body{
 	margin: 0;
 	padding: 0;
 	background-color: #2400FF;
+	cursor: url("./cursor.png"), auto;
 }
 
-#id1{
+#click{
 	font-family: hillside;
+	background-color:  #2400FF;
 	color:#FAFF00;
 	font-size: 3vh;
 	margin-top: 48vh;
 	padding-bottom: 12vh;
-	cursor: url("./cursor.png"), auto;
 }
 
 #id2{
@@ -33,21 +34,18 @@ body{
 	display:none;
 }
 
-/*#id3{
+#id3{
 	font-family: hillside;
 	color:#FAFF00;
 	font-size: 3vh;
 	margin-top: 48vh;
-	cursor: url("./cursor.png"), auto;
 }
 
-#id1:hover {
-	display:none;
+#click:hover {
+	display:none !important;
 }
-
-#id3:hover {
+/*#id3:hover {
 	display:block;
-}
 }*/
 
 @media (max-width: 500px){
@@ -56,11 +54,11 @@ body{
 		padding: 0;
 	}
 
-	#id1{
+	#click{
 		display: none !important;
 	}
 	#id2{
-		display: inline-block !important;
+		display: inline-block;
 	}
 	#id3{
 		display:none !important;
