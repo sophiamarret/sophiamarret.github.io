@@ -1,4 +1,4 @@
-let myImages = ["gif.gif", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png", "18.png"]
+let myImages = ["gif.gif", "gif2.gif", "gif3.gif", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.png", "14.png", "15.png", "16.png", "17.png", "18.png"]
 
 document.addEventListener('click', curse)
 
@@ -26,7 +26,7 @@ function rotate(event) {
 }
 
 
-let mobileImages = ["a.jpg", "b.jpg", "c.jpg"]
+let mobileImages = ["a.jpg", "b.jpg", "c.jpg", "d.jpg", "e.jpg", "f.jpg", "g.jpg", "h.jpg"]
 
 let inMobile = window.matchMedia('screen and (max-width: 812px)');
 
